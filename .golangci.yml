@@ -1,0 +1,13 @@
+linters-settings:
+  depguard:
+    rules:
+      json: 
+        files:
+          - "**/*.go"
+        deny:
+          - pkg: "encoding/json"
+            desc: use jsoniter instead
+
+linters:
+  enable:
+    - depguard
